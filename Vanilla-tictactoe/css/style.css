@@ -1,0 +1,104 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap");
+
+:root {
+    --dark-gray: #1a2a32;
+    --gray: #2e4756;
+    --turquoise: #3cc4bf;
+    --yellow: #f2b147;
+    --light-gray: #d3d3d3;
+  }
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: "Montserrat", sans-serif;
+    border: none;
+  }
+
+html, body{
+    height: 100%;
+    background-color: var(--dark-gray);
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 90px 20px;
+    flex-direction: column;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, 80px);
+    grid-template-rows: 50px repeat(3, 80px) 60px;
+    gap: 5px;
+}
+
+/* select all the div within the grid */
+.turn{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    display: flex;
+    align-self: center;
+    align-items: center;
+    background-color: var(--gray);
+    height: 100%;
+    gap: 20px;
+    color: var(--yellow);
+}
+
+.turn p{
+    font-size:  14px;
+}
+
+.turn i{
+    font-size: 1.8rem;
+    margin-left: 30px;
+}
+/* media selectors */
+@media (min-width : 768px){
+    .grid {
+        grid-template-columns: repeat(3,7em);
+        grid-template-rows: 50px repeat(3, 7em) 60px;
+        gap : 10px;
+    }
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 90px 20px;
+        flex-direction: column;
+    }
+}
+
+/* tile styles */
+.tile{
+    background-color: red;
+}
+
+.score{
+    background-color: white;
+}
+
+.action{
+    background-color: yellow;
+}
+
+
+/* footer stylings */
+footer{
+    color: white;
+    margin-top:  50px;
+}
+
+footer p{
+    margin-top:  10px;
+    text-align: center;
+}
+
+footer a {
+    columns: var(--yellow);
+}
